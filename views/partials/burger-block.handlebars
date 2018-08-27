@@ -1,0 +1,15 @@
+<li class="row">
+		<span class="label col-2">{{this.id}}</span> 
+		<span class="label col-7">{{this.burger_name}}</span>
+
+	{{#if devoured}}
+		<span class="label col-2">
+			<button class="delete" data-id="{{id}}" data-devoured="{{devoured}}">Delete</button>
+		</span>
+	{{else}}
+		<span class="label col-2">
+			<button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour</button>
+		</span>
+	{{/if}}
+</li>
+

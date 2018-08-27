@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    background: #A4BFCA;
+    margin: 2em;
+}
+
+.container {
+    padding: 2em 1em;
+    margin-top: 3em;
+    background: white;
+}
+.add {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    background: #F4A13E;
+}
+.ready {
+    background: #63AC36;
+}
+.devoured {
+    background: #D3364C;
+}
+h1 {
+    margin-bottom: 3em 0;
+}
+h2 {
+    margin: 0.5em 0;
+}
+.item {
+    text-align: left;
+    padding: 0.4em 1em;
+    margin: 0.2em 0.5em;
+}
+
+ul {
+    padding: 0;
+}
+
+#burger-1 { 
+    background-image: url("../img/burger.png"); 
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,67 @@
+<div class="container">
+    <h1> 
+        <div id="burger-1">
+        </div>
+        Burger Heaven
+    </h1>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card add">
+
+                <h2>Add a New Burger</h2>
+                <form class="create-form">
+                    <div class="form-group">
+                        <label for="burger_name">Item:</label>
+                        <input type="text" id="burger_name" name="name">
+                    </div>
+                    <button type="submit" id="submit">Add it!</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="ready card">
+                <h2>Burgers: Ready</h2>
+                <ul>
+                    {{#each burgers}} 
+                        {{#unless this.devoured}} 
+                            <div class="card item">
+                                {{!-- {{> burger-block devoured=false}} --}}
+                                <li class="row">
+                                    <span class="label col-2">{{this.id}}</span> 
+                                    <span class="label col-7">{{this.burger_name}}</span>
+                                    <span class="label col-2">
+		                            	<button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour</button>
+                                    </span>
+                                </li>
+                            </div>
+                        {{/unless}} 
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="devoured card">
+                <h2>Burgers: Devoured</h2>
+                <ul>
+                    {{#each burgers}} 
+                        {{#if devoured}} 
+
+                            <div class="card item">
+                                {{!-- {{> burger-block devoured=true}} --}}
+                                <li class="row">
+                                    <span class="label col-2">{{this.id}}</span> 
+                                    <span class="label col-7">{{this.burger_name}}</span>
+                                    <span class="label col-2">
+                                        <button class="delete" data-id="{{id}}" data-devoured="{{devoured}}">Delete</button>
+                                    </span>
+                                </li>
+                            </div>
+                        {{/if}} 
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
