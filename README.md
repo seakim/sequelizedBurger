@@ -1,4 +1,4 @@
-# burger
+# burger - using sequelize
 RCB-HW14 (first full-stack with MySQL, Node, Express, Handlebars and ORM)
 
 * When a user submits a burger's name, the app will display the burger -- waiting to be devoured.
